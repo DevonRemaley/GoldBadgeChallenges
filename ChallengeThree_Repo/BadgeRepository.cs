@@ -8,7 +8,7 @@ namespace ChallengeThree_Repo
 {
     public class BadgeRepository
     {
-        private Dictionary<int, List<string>> _door = new Dictionary<int, List<string>>();
+        private Dictionary<int, List<string>> myDictionary = new Dictionary<int, List<string>>();
 
         public void AddBadge()
         {

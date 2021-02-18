@@ -14,22 +14,7 @@ namespace ChallengeTwo_Repo
     }
 
 
-    /*
-       public bool IsValid(Claim claim)
-       {
-           TimeSpan difference = claim.DateOfClaim - claim.DateOfIncident;
 
-           if (claim.DateOfClaim <= claim.DateOfIncident)
-
-               if (difference.Days <= 30)
-               {
-                   claim.IsValid = true;
-               }
-               else
-                   claim.IsValid = false;
-
-       }
-       */
 
     public class Claim
     {
@@ -39,10 +24,14 @@ namespace ChallengeTwo_Repo
         public decimal ClaimAmount { get; set; }
         public DateTime DateOfIncident { get; set; }
         public DateTime DateOfClaim { get; set; }
-        public bool IsValid
-        {
+        public bool IsValid { get; set;}
 
-        }
+        /*public bool IsValid{
+         * get{
+         *     
+         * };
+         * }
+         */
 
         public Claim() { }
 
@@ -62,5 +51,21 @@ namespace ChallengeTwo_Repo
             DateOfClaim = dateOfClaim;
             IsValid = isValid;
         }
+
+        /*
+       public bool IsValid(Claim claim)
+       {
+           TimeSpan difference = claim.DateOfClaim - claim.DateOfIncident;
+
+           if (claim.DateOfClaim <= claim.DateOfIncident)
+
+               if (difference.Days <= 30)
+               {
+                   claim.IsValid = true;
+               }
+               else
+                   claim.IsValid = false;
+       }
+       */
     }
 }
